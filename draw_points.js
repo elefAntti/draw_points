@@ -5,7 +5,6 @@ const gl = canvas.getContext("webgl");
 const ws = new WebSocket("ws://localhost:8080");
 ws.onmessage = function(event) {
   const points = JSON.parse(event.data);
-  console.log(points)
   drawPoints(points);
 };
 
